@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "待会吃什么",
+  "usingComponents": {
+    "single-dropdown-select": "/components/single-dropdown-select/index"
+  }
+}

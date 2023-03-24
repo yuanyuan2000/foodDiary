@@ -1,0 +1,13 @@
+<view class="userInfo">
+<button wx:if="{{canIUse}}" open-type="getUserInfo" bindgetuserinfo="onGotUserInfo" bindtap="binViewTap">授权登录</button>
+<view wx:else>请升级微信版本</view>
+</view>
+<view>
+<!--头像，但无法显示
+ <image bindtap="bindViewTap" class="userinfo-avatar" src="{{useInfo.avatarUrl}}" 
+   background-size="cover">
+</image> -->
+<text class="userInfo-province">
+昵称 ： {{userInfo.nickName}}
+城市 ： {{userInfo.city}}
+省份 ： {{userInfo.province}}</text></view>

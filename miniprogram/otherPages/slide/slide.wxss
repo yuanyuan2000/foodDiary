@@ -1,0 +1,8 @@
+.title {
+  width: 100%;
+  margin: 15rpx 25rpx 10rpx;
+  justify-content: flex-start;
+  font-size: 80rpx;
+  color: #000;
+  position: relative
+}

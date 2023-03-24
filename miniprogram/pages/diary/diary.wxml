@@ -1,0 +1,107 @@
+<!--pages/diary/diary.wxml-->
+
+<image class="background" src="../../images/background.png" mode="scaleToFill"></image>
+
+<view class='calendar'>
+
+<!-- 日历标题栏（显示月日） -->
+<view class='calendar_title'>
+  <view>{{calendarTittle}}</view>
+</view>
+
+<!-- 日历头部栏（显示星期几） -->
+<view class='calendar_header'>
+  <!-- 此栏的每一个块 -->
+  <view wx:for='{{dayChinese}}' wx:key='*this'>
+    <!-- 每一块要填充的内容，包含底纹样式和字体样式 -->
+    <view class='{{(index == chooseDay) ? "weekMark" : "weekNoMark"}},{{index==0 || index==6 ? "weekBlueFont" : "weekGrayFont"}}'>
+      {{item}}
+    </view>
+  </view>
+</view>
+
+<!-- 三个月日期部分 -->
+<view class='calendar_threeDate'>
+  <!-- 日历显示本月日期的部分 -->
+  <view class='calendar_date' bindtouchstart='touchStart_calendar' catchtouchmove='touchMove_calendar' bindtouchend='touchEnd_calendar' style='left:{{calendar_date_left}}'>
+    <!-- 日历显示日期的每一个块 -->
+    <view wx:for='{{dateArr}}' wx:key='*this' bindtap='chooseDate' data-datearr='{{item}}'>
+       <!-- 每一个块根据是否为今天，是否为本月选择不同底纹、字体样式  -->
+      <view wx:if='{{date == item.dateNum && item.isThisMonth && showDate}}' class='dateFont1,nowDay'>
+        <view class='dateNum'>{{item.dateNum}}</view>
+        <view class='lunarDate'>{{item.lunarDate}}</view>
+      </view>
+      <view wx:elif='{{item.isThisMonth==true}}' class='dateFont2'>
+        <view class='dateNum'>{{item.dateNum}}</view>
+        <view class='lunarDate'>{{item.lunarDate}}</view>
+      </view>
+      <view wx:else class='dateFont3'>
+        <view class='dateNum'>{{item.dateNum}}</view>
+        <view class='lunarDate'>____</view>
+      </view>
+    </view>
+  </view>
+  <!-- 日历显示上月日期的部分 -->
+  <view class='calendar_lastDate' style='left:{{calendar_lastDate_left}}'>
+    <!-- 日历显示日期的每一个块 -->
+    <view wx:for='{{lastDateArr}}' wx:key='*this'>
+      <view class='dateFont3'>
+        <view class='dateNum'>{{item.dateNum}}</view>
+        <view class='lunarDate'>{{item.lunarDate}}</view>
+      </view>
+    </view>
+  </view>
+  <!-- 日历显示下月日期的部分 -->
+  <view class='calendar_nextDate' style='left:{{calendar_nextDate_left}}'>
+    <!-- 日历显示日期的每一个块 -->
+    <view wx:for='{{nextDateArr}}' wx:key='*this'>
+      <view class='dateFont3'>
+        <view class='dateNum'>{{item.dateNum}}</view>
+        <view class='lunarDate'>{{item.lunarDate}}</view>
+      </view>
+    </view>
+  </view>
+</view>
+
+</view>
+
+<view class='board'>
+  <view class='meal' bindtap='addBreakfast'>早餐  ＋</view>
+  <view wx:for='{{breakfast}}' wx:key='*this' class='recipe' bindtap='chooseBreakfast' data-breakfast='{{item}}'>
+    <view>
+      <image class="recipePic" src="{{item.recipeImg}}" mode="widthFix"></image>
+      <view class="recipeName">{{item.recipeName}}</view>
+      <view class="recipegoto">
+        <image class="gotoSRS" src="{{gotoSRSImg}}" mode="widthFix"></image>
+      </view>
+    </view>
+  </view>
+  <view class='meal' bindtap='addLunch'>午餐  ＋</view>
+  <view wx:for='{{lunch}}' wx:key='*this' class='recipe' bindtap='chooseLunch' data-lunch='{{item}}'>
+    <view>
+      <image class="recipePic" src="{{item.recipeImg}}" mode="widthFix"></image>
+      <view class="recipeName">{{item.recipeName}}</view>
+      <view class="recipegoto">
+        <image class="gotoSRS" src="{{gotoSRSImg}}" mode="widthFix"></image>
+      </view>
+    </view>
+  </view>
+  <view class='meal' bindtap='addDinner'>晚餐  ＋</view>
+  <view wx:for='{{dinner}}' wx:key='*this' class='recipe' bindtap='chooseDinner' data-dinner='{{item}}'>
+    <view>
+      <image class="recipePic" src="{{item.recipeImg}}" mode="widthFix"></image>
+      <view class="recipeName">{{item.recipeName}}</view>
+      <view class="recipegoto">
+        <image class="gotoSRS" src="{{gotoSRSImg}}" mode="widthFix"></image>
+      </view>
+    </view>
+  </view>
+</view>
+
+<!-- 底部空白栏 -->
+<view class='empty'>
+</view>
+
+
+<view class='divider_line0'>
+</view>

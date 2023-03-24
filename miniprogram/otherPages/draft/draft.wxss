@@ -1,0 +1,7 @@
+
+.box{
+   width: 250rpx;
+   height: 250rpx;
+   background-color: pink;
+   opacity: 0.8;   /*透明度*/
+}

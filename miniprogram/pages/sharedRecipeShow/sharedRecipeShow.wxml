@@ -1,0 +1,40 @@
+<!-- 背景图片 -->
+<image class="background" src="../../images/background.png" mode="aspectFill"></image>
+<!-- 食谱顶部大图 -->
+<view class="top_Pic">
+	<image class="recipe_image" src="{{recipeImg}}" mode="widthFix"></image>
+	<view class="recipeName">
+		<text>{{recipeName}}</text>
+	</view>
+	<view class="recipeIntroduction">
+		<text>{{recipeIntroduction}}</text>
+	</view>
+</view>
+
+<!-- 中间显示食物信息的部分 -->
+<view class="foodBoard">
+	<block wx:for='{{food}}' wx:key='index'>
+		<view class='food'>
+			<image class="foodPic" src="{{item.foodImage}}" mode="widthFix"></image>
+			<view class="foodInformation">
+				<view class="foodName">{{item.foodName}}</view>
+				<view class="zhishuStr">
+					<text space="ensp">对您健康指数:      对您美味指数:</text>
+				</view>
+				<view class="zhishuValue">
+					<text space="ensp">{{item.health_value}}                 {{item.taste_value}}</text>
+				</view>
+				<view class="foodIntroduction">{{item.foodIntroduction}}</view>
+			</view>
+		</view>
+	</block>
+</view>
+
+<!-- 保存按钮 -->
+<view class="theButton">
+	<button style="width:340rpx" class='save' loading='{{isloading1}}' bindtap='save'>保存到我的日记</button>
+</view>
+
+<!-- 底部空白 -->
+<view class='empty'>
+</view>

@@ -1,0 +1,8 @@
+/* pages/userinfo/userinfo.wxss */
+page{
+    background-color: rgba(248, 53, 86, 0.185);
+}
+
+.userInfo-province{
+ font-style: 20px;
+}

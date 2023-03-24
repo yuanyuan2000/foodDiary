@@ -1,0 +1,56 @@
+page{
+  background:linear-gradient(rgb(245, 206, 206), #fff) ;
+}
+
+.userinfo {  
+  position: relative;  
+  width: 750rpx;  
+  height: 320rpx;  
+  color: #000;  
+  display: flex;  
+  flex-direction: column;  
+  align-items: center;  
+}  
+  
+.userinfo-avatar {  
+  overflow:hidden;  
+  display: block;  
+  width: 160rpx;  
+  height: 160rpx;  
+  margin: 20rpx;  
+  margin-top: 50rpx;  
+  border-radius: 50%;  
+  border: 2px solid #fff;  
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);  
+}  
+  
+.userinfo{  
+  /* color: #fff; */  
+  font-size: 14px;  
+  border-radius:0%;  
+  background: linear-gradient(rgb(240,16,16), rgb(240, 211, 210)); 
+}  
+
+.weui-cell__hd image {
+  margin-right: 50rpx;
+  vertical-align: middle;
+  width: 50px;  
+  height: 50px;
+}
+
+.weui-cells::after{
+  content: none;
+  border-bottom: none;
+}
+
+.weui-cells::before{
+  border-top: none;
+}
+
+/* 箭头部分不好看就删掉↓ */
+.arrows image {
+  vertical-align: middle;
+  width: 50px;
+  height: 50px;
+  margin-left: 50px;
+}

@@ -1,0 +1,58 @@
+<!--pages/person/person.wxml-->
+<!-- 背景 -->
+<image class="background" src="../../images/background.png" mode="top"></image>
+<!-- 用户头像 -->
+<view class="user_info_wrap">
+  <!-- 如果已登录则显示用户信息 -->
+  <view wx:if="{{userinfo.avatarUrl}}" class="user_img_wrap">   
+    <view class="user_info">
+      <!-- 头像和昵称 -->
+      <image class="user_icon" src="{{userinfo.avatarUrl}}"></image>
+      <view class="user_name">{{userinfo.nickName}}</view>
+    </view>
+  </view>
+  <!-- 如果未授权则显示授权按钮 -->
+  <view wx:else class="user_btn">
+    <!-- <navigator url="/pages/log/log">登录</navigator> -->
+    <button type="primary" plain open-type="getUserInfo" bindgetuserinfo="handleGetUserInfo">登录</button>
+  </view>
+</view>
+
+<view class="user_content">
+  <view class="user_main">
+    <!-- 四个选项 -->
+    <view class="food_wrap">
+
+      <view class="food_wrap_item">
+        <image src="/icons/foodbook.png" class="foodimg" mode="widthFix"></image>
+        <text class="foodtext"  bind:tap="gotoself">我的个人档案</text>
+        <image src="/icons/arrow.png" class="arrowimg" mode="widthFix"></image>
+      </view>
+
+      <view class="food_wrap_item">
+        <image src="/icons/health.png" class="foodimg" mode="widthFix"></image>
+        <text class="foodtext" bind:tap="gotohealthInfo">我的健康资料</text>
+        <image src="/icons/arrow.png" class="arrowimg" mode="widthFix"></image>
+      </view>
+
+      <view class="food_wrap_item">
+        <image src="/icons/collection.png" class="foodimg" mode="widthFix"></image>
+        <text class="foodtext"  bind:tap="gotofoodbook">我的口味喜好</text>
+        <image src="/icons/arrow.png" class="arrowimg" mode="widthFix"></image>
+      </view>
+
+      <view class="food_wrap_item">
+        <image src="/icons/set.png" class="foodimg" mode="widthFix"></image>
+        <text class="foodtext">设置</text>
+        <image src="/icons/arrow.png" class="arrowimg" mode="widthFix"></image>
+      </view>
+
+      <view class="food_wrap_item1">
+        <image src="/icons/we.png" class="foodimg" mode="widthFix"></image>
+        <text class="foodtext">关于我们</text>
+        <image src="/icons/arrow.png" class="arrowimg" mode="widthFix"></image>
+      </view>
+      
+    </view>
+  </view>
+</view>

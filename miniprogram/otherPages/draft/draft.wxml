@@ -1,0 +1,20 @@
+<view>
+    Hello, world! || {{msg}}
+    <view>num:{{num}}</view>
+    <view>isBoy:{{isBoy}}</view>
+    <view>person.name:{{person.name}} -- person.height:{{person.height}}</view>
+    <view id="item-{{id}}"> </view>
+    <view> <checkbox checked="{{false}}"> </checkbox> </view>
+    <view> <checkbox checked="{{isBoy?true:false}}"> </checkbox> </view>
+    <view> 10+1000={{num1+num2}} || {{str1+str2}}</view>
+    <view> <checkbox checked="{{num1>=20}}"> </checkbox> </view>
+    <view wx:if="{{isBoy}}"> isBoy为真才输出了这句话的！</view>
+    <view wx:for="{{arr}}" wx:key="{{index}}">
+        {{index}}:{{item}}
+    </view>
+    <view style="background-color: yellow;  color:{{myColor}}">123</view>
+    <view class="{{myClass}}">456</view>
+    <view hover-class="box">789</view>
+    <view><text selectable="true">hahahahahhhahhahhaa  </text></view>
+    <view><text decode="true">普&nbsp;通  </text></view>
+</view>

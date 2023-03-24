@@ -1,25 +1,60 @@
 {
   "pages": [
-    "pages/index/index",
-    "pages/userConsole/userConsole",
-    "pages/storageConsole/storageConsole",
-    "pages/databaseGuide/databaseGuide",
-    "pages/addFunction/addFunction",
-    "pages/deployFunctions/deployFunctions",
-    "pages/chooseLib/chooseLib",
-    "pages/openapi/openapi",
-    "pages/openapi/serverapi/serverapi",
-    "pages/openapi/callback/callback",
-    "pages/openapi/cloudid/cloudid",
-    "pages/im/im",
-    "pages/im/room/room"
+    "pages/eat/eat",
+    "pages/diary/diary",
+    "pages/person/person",
+    "pages/log/log",
+    "pages/foodbook/foodbook",
+    "pages/healthInfo/healthInfo",
+    "pages/singleRecipeShow/singleRecipeShow",
+    "pages/sharedRecipeShow/sharedRecipeShow",
+    "pages/abc/index/index",
+    "pages/abc/userConsole/userConsole",
+    "pages/abc/storageConsole/storageConsole",
+    "pages/abc/databaseGuide/databaseGuide",
+    "pages/abc/addFunction/addFunction",
+    "pages/abc/deployFunctions/deployFunctions",
+    "pages/abc/chooseLib/chooseLib",
+    "pages/abc/openapi/openapi",
+    "pages/abc/openapi/serverapi/serverapi",
+    "pages/abc/openapi/callback/callback",
+    "pages/abc/openapi/cloudid/cloudid",
+    "pages/abc/im/im",
+    "pages/abc/im/room/room",
+    "pages/abc/excelUpload/excelUpload",
+    "pages/self/self"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",
-    "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#F6F6F6",
-    "navigationBarTitleText": "云开发 QuickStart",
-    "navigationBarTextStyle": "black"
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "待会吃什么",
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": false
+  },
+  "tabBar": {
+    "color": "#000",
+    "selectedColor": "#00f",
+    "backgroundColor": "#fff",
+    "list": [
+      {
+        "pagePath": "pages/diary/diary",
+        "text": "日记",
+        "iconPath": "images/diaryIcon.png",
+        "selectedIconPath": "images/diaryIcon1.png"
+      },
+      {
+        "pagePath": "pages/eat/eat",
+        "text": "吃什么",
+        "iconPath": "images/eatIcon.png",
+        "selectedIconPath": "images/eatIcon1.png"
+      },
+      {
+        "pagePath": "pages/person/person",
+        "text": "我的",
+        "iconPath": "images/personIcon.png",
+        "selectedIconPath": "images/personIcon1.png"
+      }
+    ]
   },
   "sitemapLocation": "sitemap.json",
   "style": "v2"

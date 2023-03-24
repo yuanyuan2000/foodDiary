@@ -1,0 +1,50 @@
+<!--pages/singleRecipeShow/singleRecipeShow.wxml-->
+<!-- 背景图片 -->
+<image class="background" src="../../images/background.png" mode="aspectFill"></image>
+<!-- 食谱顶部大图 -->
+<view class="top_Pic">
+	<image bindtap='changeBigImg' class="recipe_image" src="{{recipeImg}}" mode="widthFix"></image>
+	<view class="recipeNameBoard">
+		<view class="typeName">{{mealTypeName}}——</view>
+		<view class="recipeName">
+			<input maxlength="10" value="{{recipeName}}" bindinput="getRecipeName" />
+		</view>
+	</view>
+	<view class="recipeIntroduction">
+		<input maxlength="18" value="{{recipeIntroduction}}" bindinput="getRecipeIntroduction" />
+	</view>
+</view>
+
+<!-- 中间显示食物信息的部分 -->
+<view class="foodBoard">
+	<block wx:for='{{food}}' wx:key='index'>
+		<view class='food'>
+			<image class="foodPic" src="{{item.foodImage}}" mode="widthFix"></image>
+			<view class="foodInformation">
+				<view class="modification">
+					<single-dropdown-select propArray='{{foodName}}' data-food='{{item}}' bind:select='select' />
+					<view class="foodName">{{item.foodName}}</view>
+					<button class="delete" size="mini" bindtap="delete" data-index='{{item.index}}'>删除</button>
+				</view>
+				<view class="zhishuStr">
+					<text space="ensp">对您健康指数:      对您美味指数:</text>
+				</view>
+				<view class="zhishuValue">
+					<text space="ensp">{{item.health_value}}                 {{item.taste_value}}</text>
+				</view>
+				<view class="foodIntroduction">{{item.foodIntroduction}}</view>
+			</view>
+		</view>
+	</block>
+</view>
+
+<!-- 三个按钮 -->
+<view class="three_Button">
+	<button style="width:220rpx" class='addFood' loading='{{isloading1}}' bindtap='addFood'>添加食物</button>
+	<button style="width:160rpx" class='save' loading='{{isloading2}}' bindtap='save'>保存</button>
+  <button style="width:220rpx" class='share' bindtap='share'>保存并分享</button>
+</view>
+
+<!-- 底部空白 -->
+<view class='empty'>
+</view>

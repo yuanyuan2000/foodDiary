@@ -1,0 +1,33 @@
+<!--pages/healthInfo/healthInfo.wxml-->
+<!-- 背景 -->
+<image class="background" src="../../images/background.png" mode="scaleToFill"></image>
+
+
+<form bindsubmit="submitClick" bindreset="resetClick">
+  <!-- 健康情况
+  <view class="part1">
+    <view class="title1">健康状况</view>
+    <block wx:for="{{objectArray}}" wx:key="index">
+      <view wx:if='{{item.chosen}}' class='choosesituation'>{{item.name}}</view>
+      <view wx:else hidden>{{item.name}}</view>
+    </block>
+    <view class="section">
+      <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">编辑健康情况</picker>
+    </view>
+  </view> -->
+
+  <!-- 健康需求标签 -->
+  <view class="part2">
+	  <view class="title2">健康需求</view>
+    <view class='chooseBoard'>
+      <view wx:for='{{preferenceHealth}}' wx:key='*this' bindtap='choose' data-pf='{{item}}'>
+         <!-- 每一个块根据是否被选择，采用不同样式  -->
+        <view wx:if='{{item.checked}}' class='healthFont1,chooseHealth'>{{item.name}}</view>
+        <view wx:else class='healthFont2'>{{item.name}}</view>
+      </view>
+    </view>
+  </view>
+
+  <button form-type='submit' class='save' style='width:160rpx'>保存</button>
+  <!-- <button form-type="reset">重置</button> -->
+</form>

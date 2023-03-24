@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "添加食谱",
+  "usingComponents": {
+    "single-dropdown-select": "/components/single-dropdown-select/index"
+  }
+}

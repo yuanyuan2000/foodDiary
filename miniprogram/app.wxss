@@ -5,27 +5,21 @@
   align-items: center;
   box-sizing: border-box;
 } 
-
 button {
   background: initial;
 }
-
 button:focus{
   outline: 0;
 }
-
 button::after{
   border: none;
 }
-
-
 page {
   background: #f6f6f6;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
 }
-
 .userinfo, .uploader, .tunnel {
   margin-top: 40rpx;
   height: 140rpx;
@@ -39,7 +33,6 @@ page {
   align-items: center;
   transition: all 300ms ease;
 }
-
 .userinfo-avatar {
   width: 100rpx;
   height: 100rpx;
@@ -48,22 +41,18 @@ page {
   background-size: cover;
   background-color: white;
 }
-
 .userinfo-avatar:after {
   border: none;
 }
-
 .userinfo-nickname {
   font-size: 32rpx;
   color: #007aff;
   background-color: white;
   background-size: cover;
 }
-
 .userinfo-nickname::after {
   border: none;
 }
-
 .uploader, .tunnel {
   height: auto;
   padding: 0 0 0 40rpx;
@@ -71,14 +60,12 @@ page {
   align-items: flex-start;
   box-sizing: border-box;
 }
-
 .uploader-text, .tunnel-text {
   width: 100%;
   line-height: 52px;
   font-size: 34rpx;
   color: #007aff;
 }
-
 .uploader-container {
   width: 100%;
   height: 400rpx;
@@ -89,16 +76,13 @@ page {
   box-sizing: border-box;
   border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
-
 .uploader-image {
   width: 100%;
   height: 360rpx;
 }
-
 .tunnel {
   padding: 0 0 0 40rpx;
 }
-
 .tunnel-text {
   position: relative;
   color: #222;
@@ -109,21 +93,17 @@ page {
   box-sizing: border-box;
   border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
-
 .tunnel-text:first-child {
   border-top: none;
 }
-
 .tunnel-switch {
   position: absolute;
   right: 20rpx;
   top: -2rpx;
 }
-
 .disable {
   color: #888;
 }
-
 .service {
   position: fixed;
   right: 40rpx;
@@ -138,16 +118,13 @@ page {
   justify-content: center;
   transition: all 300ms ease;
 }
-
 .service-button {
   position: absolute;
   top: 40rpx;
 }
-
 .service:active {
   box-shadow: none;
 }
-
 .request-text {
   padding: 20rpx 0;
   font-size: 24rpx;

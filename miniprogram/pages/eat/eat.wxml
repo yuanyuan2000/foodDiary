@@ -1,0 +1,26 @@
+<!--pages/eat/eat.wxml-->
+<image class="background" src="../../images/background.png" mode="scaleToFill"></image>
+
+<view class="top">
+	<view class="searchBoard">
+		<image class="searchImage" src="{{srcSearch}}" mode="widthFix"></image>
+		<view class="inputBoard">
+			<input maxlength="15" value="{{searchInput}}" />
+		</view>
+	</view>
+	<image class="messageImage" src="{{srcMessage}}" mode="widthFix"></image>
+</view>
+
+<view class="middle">
+	<view wx:for="{{recommendGroup}}" wx:key="*this">
+		<view class="recommendRecipe" bindtap="gotoRecipe" data-recipe="{{item}}">
+			<image class="recipeImage" src="{{item.recipeImg}}" mode="scaleToFill"></image>
+			<view class="recipeName">
+        <text>{{item.recipeName}}</text>
+      </view>
+			<view class="{{item.recipeIntroduction.length<12?'recipeIntroduction1':'recipeIntroduction2'}}">
+        <text>{{item.recipeIntroduction}}</text>
+      </view>
+		</view>
+	</view>
+</view>

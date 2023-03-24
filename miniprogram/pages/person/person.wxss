@@ -1,0 +1,112 @@
+/* pages/person/person.wxss */
+.background {
+  width: 100%;
+  height: 400rpx;
+  position: fixed;
+  /* background-size: 100% 100%; */
+  z-index: -1;
+}
+
+.user_info_wrap{
+  height: 400rpx;
+  overflow: hidden;
+  position: relative;
+}
+
+ .uesr_img_wrap{
+  position: relative;
+}
+
+.user_info{
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top:35%;
+  text-align: center;
+}
+
+.user_icon{
+  width:130rpx;
+  height: 130rpx;
+  border-radius: 50%;
+  border-color: rgb(99, 99, 99);
+  border-width: 30px;
+}
+
+.user_name{
+  color:rgb(71, 71, 71);
+  font-size: 30rpx;
+}
+
+/* 登录 */
+.user_btn{
+  position: absolute;
+  left:50%;
+  transform: translateX(-50%);
+  top:40%;
+  border:1rpx solid rgb(101, 168, 0);
+  color: rgb(117, 196, 0);
+  font-size: 37rpx;
+  border-radius: 10rpx;
+}
+
+/* 选项 */
+.user_content{
+  position: relative;
+}
+
+.user_main{
+  padding-bottom: 250rpx;
+  position: absolute;
+  width: 80%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.food_wrap{
+  border: 2rpx solid rgb(99, 99, 99);
+  border-radius: 4%;
+}
+
+.food_wrap_item{
+  transform: translateX(7%);
+  width: 85%;
+  left: 70%;
+  height: 77rpx;
+  display: flex;
+  flex: 8;
+  flex-direction: row;
+  padding: 10rpx;
+  border-bottom: 1rpx solid rgb(209, 209, 209);
+  align-items: center;
+  font-size: 30rpx;
+}
+/* 最后一行不用下划线 */
+.food_wrap_item1{
+ transform: translateX(7%);
+  width: 85%;
+  left: 70%;
+  height: 77rpx;
+  display: flex;
+  flex: 8;
+  flex-direction: row;
+  padding: 10rpx;
+  align-items: center;
+  font-size: 30rpx;
+}
+
+.foodimg{
+  flex: 1;
+  max-height: 50rpx;
+  max-width: 50rpx;
+}
+
+.foodtext{
+  flex:6;
+}
+
+.arrowimg{
+  flex: 1;
+  max-height: 40rpx;
+  max-width: 40rpx;
+}

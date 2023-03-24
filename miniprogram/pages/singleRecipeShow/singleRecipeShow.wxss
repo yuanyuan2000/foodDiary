@@ -1,0 +1,154 @@
+/*pages/singleRecipeShow/singleRecipeShow.wxss*/
+.background {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background-size: 100% 100%;
+  z-index: -1;
+}
+.top_Pic {
+  display: block;
+  margin: 20rpx 0;
+  width: 70%;
+  transform: translateX(21%);
+  position: relative;
+  box-shadow: 2rpx 4rpx 6rpx 4rpx rgb(170, 170, 170);
+  border-radius: 8%;
+  overflow: auto;
+}
+.recipe_image {
+  width: 100%;
+}
+.recipeNameBoard{
+  display: flex;
+  justify-content: flex-start;
+}
+.typeName {
+  font-size: 30rpx;
+  font-weight: bolder;
+  color: rgb(20, 20, 20);
+  text-align: left;
+  padding-left: 15rpx;
+}
+.recipeName {
+  font-size: 30rpx;
+  color: rgb(40, 40, 40);
+  text-align: left;
+}
+.recipeIntroduction{
+  color: rgb(130,130,130);
+  font-size: 25rpx;
+  text-align: center;
+  padding: 10rpx 0;
+}
+
+.foodBoard{
+  width: 100%;
+  position: relative;
+  display: block;
+}
+.food{
+  margin: 30rpx 0;
+  width: 675rpx;
+  height: 205rpx;
+  transform: translateX(37.5rpx);
+  position: relative;
+  box-shadow: 2rpx 4rpx 6rpx 4rpx rgb(170, 170, 170);
+  border-radius: 4%;
+  overflow: auto;
+  display: flex;
+  justify-content: center;
+}
+.foodPic{
+  padding: 5rpx 10rpx;
+  width: 30%;
+}
+.foodInformation{
+  width: 70%;
+  display: block;
+  justify-content: flex-start;
+}
+
+.modification{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.foodName{
+  font-size: 28rpx;
+  font-weight: bolder;
+  color: rgb(24, 24, 24);
+  position: absolute;
+  left: 250rpx;
+  z-index: 1;
+}
+.delete{
+  margin: 5rpx 20rpx;
+  background-color: rgb(226, 100, 100);
+  color:white;
+  border-radius: 10rpx;
+  overflow: hidden;
+}
+
+.zhishu{
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 10rpx;
+}
+.zhishuStr{
+  font-size: 25rpx;
+  margin-left: 5rpx;
+  margin-top: 5rpx;
+  color: rgb(88, 80, 80);
+}
+.zhishuValue{
+  font-size: 25rpx;
+  font-weight: bolder;
+  color: rgb(43, 18, 225);
+  position: relative;
+  left: 170rpx;
+  bottom: 32rpx;
+}
+.foodIntroduction{
+  font-size: 25rpx;
+  color: rgb(88, 80, 80);
+  margin-left: 5rpx;
+  margin-top: 5rpx;
+  position: relative;
+  bottom: 32rpx;
+}
+
+.three_Button{
+  margin: 15rpx 0;
+  display: flex;
+  justify-content: space-around;
+}
+.addFood{
+  line-height: 50rpx;
+  font-size: 25rpx;
+  background-color: rgb(88, 141, 226);
+  color:white;
+  border-radius: 20rpx;
+  overflow: hidden;
+}
+.save{
+  line-height: 50rpx;
+  font-size: 25rpx;
+  background-color: rgb(88, 141, 226);
+  color:white;
+  border-radius: 20rpx;
+  overflow: hidden;
+}
+.share{
+  line-height: 50rpx;
+  font-size: 23rpx;
+  background-color: rgb(88, 141, 226);
+  color:white;
+  border-radius: 20rpx;
+  overflow: hidden;
+}
+
+.empty{
+  width: 100%;
+  height: 50rpx;
+}
